@@ -646,15 +646,15 @@
           {t:"Un plan para emprender con cabeza.",s:"s4"}]}
       ],
       stages:{
-        s1:{name:"Estás empezando",msg:"Estás en el inicio de algo nuevo. No es debilidad: es el punto más valiente, porque todo está por construirse.",step:"Tu primer paso es ganar claridad: ver dónde estás, qué tienes y qué quieres — sin juzgarte."},
-        s2:{name:"Estás buscando rumbo",msg:"Tienes energía y ganas; lo que falta es dirección. La buena noticia: el rumbo se elige, no se espera.",step:"Tu primer paso es elegir UNA meta clara y traducirla en pasos concretos."},
-        s3:{name:"Estás lista para crecer",msg:"Ya tienes una base sólida. Ahora se trata de avanzar con estrategia y llevar lo que lograste al siguiente nivel.",step:"Tu primer paso es definir qué significa crecer para ti y proteger tu energía mientras avanzas."},
-        s4:{name:"Estás lista para emprender",msg:"Quieres construir algo tuyo. Eso pide tanta estrategia como corazón — y aquí trabajamos las dos.",step:"Tu primer paso es convertir tu idea en un proyecto: alcance, primer hito y un plan realista."}
+        s1:{name:"Estás empezando",pdf:"guia-empezando.pdf",msg:"Estás en el inicio de algo nuevo. No es debilidad: es el punto más valiente, porque todo está por construirse.",step:"Tu primer paso es ganar claridad: ver dónde estás, qué tienes y qué quieres — sin juzgarte."},
+        s2:{name:"Estás buscando rumbo",pdf:"guia-rumbo.pdf",msg:"Tienes energía y ganas; lo que falta es dirección. La buena noticia: el rumbo se elige, no se espera.",step:"Tu primer paso es elegir UNA meta clara y traducirla en pasos concretos."},
+        s3:{name:"Estás lista para crecer",pdf:"guia-crecer.pdf",msg:"Ya tienes una base sólida. Ahora se trata de avanzar con estrategia y llevar lo que lograste al siguiente nivel.",step:"Tu primer paso es definir qué significa crecer para ti y proteger tu energía mientras avanzas."},
+        s4:{name:"Estás lista para emprender",pdf:"guia-emprender.pdf",msg:"Quieres construir algo tuyo. Eso pide tanta estrategia como corazón — y aquí trabajamos las dos.",step:"Tu primer paso es convertir tu idea en un proyecto: alcance, primer hito y un plan realista."}
       },
       result_kicker:"Tu resultado",result_stage:"Tu etapa",result_step:"Tu primer paso",
-      email_h:"Recibe tu guía personalizada",email_p:"Te envío la guía pensada para tu etapa y te sumo a la comunidad. Sin spam.",
-      email_ph:"Tu correo electrónico",email_btn:"Enviar mi guía →",restart:"Volver a empezar",
-      ok:"¡Listo! Tu guía va en camino. Revisa tu correo. 🩵"
+      email_h:"Recibe tu guía personalizada",email_p:"Déjame tu correo, te sumo a la comunidad y descargas tu guía al instante. Sin spam.",
+      email_ph:"Tu correo electrónico",email_btn:"Enviar y descargar →",download:"Descargar tu guía →",restart:"Volver a empezar",
+      ok:"¡Listo! Aquí tienes tu guía 👇"
     },
     en:{
       start_kicker:"Free quiz · 2 minutes",
@@ -685,15 +685,15 @@
           {t:"A smart plan to start my venture.",s:"s4"}]}
       ],
       stages:{
-        s1:{name:"You're starting out",msg:"You're at the beginning of something new. It's not weakness: it's the bravest point, because everything is still to be built.",step:"Your first step is to gain clarity: see where you are, what you have and what you want — without judging yourself."},
-        s2:{name:"You're finding direction",msg:"You have energy and drive; what's missing is direction. Good news: direction is chosen, not waited for.",step:"Your first step is to choose ONE clear goal and translate it into concrete steps."},
-        s3:{name:"You're ready to grow",msg:"You already have a solid base. Now it's about moving forward with strategy and taking what you've achieved to the next level.",step:"Your first step is to define what growth means for you and protect your energy as you move."},
-        s4:{name:"You're ready to start your venture",msg:"You want to build something of your own. That takes as much strategy as heart — and here we work on both.",step:"Your first step is to turn your idea into a project: scope, first milestone and a realistic plan."}
+        s1:{name:"You're starting out",pdf:"guia-empezando.pdf",msg:"You're at the beginning of something new. It's not weakness: it's the bravest point, because everything is still to be built.",step:"Your first step is to gain clarity: see where you are, what you have and what you want — without judging yourself."},
+        s2:{name:"You're finding direction",pdf:"guia-rumbo.pdf",msg:"You have energy and drive; what's missing is direction. Good news: direction is chosen, not waited for.",step:"Your first step is to choose ONE clear goal and translate it into concrete steps."},
+        s3:{name:"You're ready to grow",pdf:"guia-crecer.pdf",msg:"You already have a solid base. Now it's about moving forward with strategy and taking what you've achieved to the next level.",step:"Your first step is to define what growth means for you and protect your energy as you move."},
+        s4:{name:"You're ready to start your venture",pdf:"guia-emprender.pdf",msg:"You want to build something of your own. That takes as much strategy as heart — and here we work on both.",step:"Your first step is to turn your idea into a project: scope, first milestone and a realistic plan."}
       },
       result_kicker:"Your result",result_stage:"Your stage",result_step:"Your first step",
-      email_h:"Get your personalized guide",email_p:"I'll send the guide made for your stage and add you to the community. No spam.",
-      email_ph:"Your email address",email_btn:"Send my guide →",restart:"Start over",
-      ok:"Done! Your guide is on its way. Check your inbox. 🩵"
+      email_h:"Get your personalized guide",email_p:"Leave your email, join the community and download your guide instantly. No spam.",
+      email_ph:"Your email address",email_btn:"Send & download →",download:"Download your guide →",restart:"Start over",
+      ok:"Done! Here is your guide 👇"
     }
   };
   (function(){
@@ -710,7 +710,7 @@
         if(st.i>0){h+='<button class="qback" data-act="back">'+L.back+'</button>';}
       } else {
         var stg=tally(); var S=L.stages[stg];
-        h='<div class="q-kicker">'+L.result_kicker+'</div><div class="rstage"><span class="rlabel">'+L.result_stage+'</span><h3>'+S.name+'</h3></div><p class="rmsg">'+S.msg+'</p><div class="rstep"><strong>'+L.result_step+':</strong> '+S.step+'</div><div class="rform"><h4>'+L.email_h+'</h4><p class="rfp">'+L.email_p+'</p><form id="diagForm" class="eform"><input type="email" name="email" required placeholder="'+L.email_ph+'" aria-label="Email" /><input type="hidden" name="etapa" value="'+S.name+'" /><button type="submit" class="btn btn-primary">'+L.email_btn+'</button></form><p class="q-ok" id="diagOk">'+L.ok+'</p><button class="qback" data-act="restart">'+L.restart+'</button></div>';
+        h='<div class="q-kicker">'+L.result_kicker+'</div><div class="rstage"><span class="rlabel">'+L.result_stage+'</span><h3>'+S.name+'</h3></div><p class="rmsg">'+S.msg+'</p><div class="rstep"><strong>'+L.result_step+':</strong> '+S.step+'</div><div class="rform"><h4>'+L.email_h+'</h4><p class="rfp">'+L.email_p+'</p><form id="diagForm" class="eform"><input type="email" name="email" required placeholder="'+L.email_ph+'" aria-label="Email" /><input type="hidden" name="etapa" value="'+S.name+'" /><button type="submit" class="btn btn-primary">'+L.email_btn+'</button></form><p class="q-ok" id="diagOk">'+L.ok+'</p><a class="btn btn-primary q-dl" id="diagDl" href="'+(S.pdf||'Guia_Tu_vida_en_modo_proyecto.pdf')+'" download style="display:none;margin-top:10px">'+L.download+'</a><button class="qback" data-act="restart">'+L.restart+'</button></div>';
       }
       m.innerHTML=h;
       var sb=m.querySelector('[data-act="start"]'); if(sb){sb.onclick=function(){st.mode='q';st.i=0;st.ans=[];render();};}
@@ -718,7 +718,7 @@
       for(var k=0;k<opts.length;k++){(function(btn){btn.onclick=function(){st.ans[st.i]=btn.getAttribute('data-stage');st.i++;if(st.i>=L.questions.length){st.mode='result';}render();};})(opts[k]);}
       var bk=m.querySelector('[data-act="back"]'); if(bk){bk.onclick=function(){if(st.i>0)st.i--;render();};}
       var rs=m.querySelector('[data-act="restart"]'); if(rs){rs.onclick=function(){st.mode='intro';st.i=0;st.ans=[];render();};}
-      var f=m.querySelector('#diagForm'); if(f){f.onsubmit=function(ev){ev.preventDefault();var ok=m.querySelector('#diagOk');var fd=new FormData(f);fd.append('form-name','diagnostico');if(window.fetch){fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).then(function(){if(ok)ok.style.display='block';f.style.display='none';}).catch(function(){if(ok)ok.style.display='block';f.style.display='none';});}else{if(ok)ok.style.display='block';}};}
+      var f=m.querySelector('#diagForm'); if(f){f.onsubmit=function(ev){ev.preventDefault();var ok=m.querySelector('#diagOk');var fd=new FormData(f);fd.append('form-name','diagnostico');if(window.fetch){fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).then(function(){if(ok)ok.style.display='block';var dl=m.querySelector('#diagDl');if(dl)dl.style.display='inline-flex';f.style.display='none';}).catch(function(){if(ok)ok.style.display='block';var dl=m.querySelector('#diagDl');if(dl)dl.style.display='inline-flex';f.style.display='none';});}else{if(ok)ok.style.display='block';var dl3=m.querySelector('#diagDl');if(dl3)dl3.style.display='inline-flex';}};}
     }
     function tally(){var c={s1:0,s2:0,s3:0,s4:0};for(var k=0;k<st.ans.length;k++){if(c[st.ans[k]]!=null)c[st.ans[k]]++;}var best='s1',bv=-1;['s1','s2','s3','s4'].forEach(function(s){if(c[s]>bv){bv=c[s];best=s;}});return best;}
     window.__renderQuiz=render;
